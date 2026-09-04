@@ -222,6 +222,7 @@ function renderCards() {
     card.setAttribute("role", "button");
     card.setAttribute("aria-label", `${r.name} — ${r.type} recipe`);
     card.dataset.id = r.id;
+    card.dataset.type = r.type.toLowerCase();
 
     const modern = r.type === "Modern" ? " card__badge--modern" : "";
     card.innerHTML = `
@@ -339,9 +340,55 @@ const revealObserver = new IntersectionObserver(
 const observeReveals = () =>
   $$(".reveal:not(.is-visible)").forEach((el) => revealObserver.observe(el));
 
+// --- Filter (All / Traditional / Modern) ---
+const filterButtons = $$(".filter");
+
+function applyFilter(type) {
+  filterButtons.forEach((b) => {
+    const active = b.dataset.filter === type;
+    b.classList.toggle("filter--active", active);
+    b.setAttribute("aria-pressed", String(active));
+  });
+
+  const cards = $$(".card");
+  const visible = [];
+  cards.forEach((card) => {
+    const show = type === "all" || card.dataset.type === type;
+    card.classList.toggle("is-filtered", !show);
+    if (show) {
+      card.classList.add("is-visible");
+      visible.push(card);
+    }
+  });
+
+  // Staggered re-entry animation
+  visible.forEach((card, i) => {
+    card.style.animationDelay = `${i * 55}ms`;
+    card.classList.remove("card-enter");
+    void card.offsetWidth; // restart the animation
+    card.classList.add("card-enter");
+  });
+}
+
+function setFilterCounts() {
+  $$(".filter").forEach((b) => {
+    const t = b.dataset.filter;
+    const count =
+      t === "all"
+        ? RECIPES.length
+        : RECIPES.filter((r) => r.type.toLowerCase() === t).length;
+    b.querySelector(".filter__count").textContent = count;
+  });
+}
+
+filterButtons.forEach((b) =>
+  b.addEventListener("click", () => applyFilter(b.dataset.filter))
+);
+
 // --- Footer year ---
 $("#year").textContent = new Date().getFullYear();
 
 // --- Init ---
 renderCards();
+setFilterCounts();
 observeReveals();

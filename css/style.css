@@ -257,6 +257,33 @@ button { font-family: inherit; cursor: pointer; }
 .collection__head { max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }
 .collection__note { margin-top: 14px; color: #6b5b78; }
 
+.collection__filters {
+  max-width: var(--maxw); margin: 30px auto 0; padding: 0 28px;
+  display: flex; flex-wrap: wrap; gap: 10px;
+}
+.filter {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 18px; border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--white); color: var(--plum);
+  font-weight: 600; font-size: 0.9rem;
+  transition: background .2s ease, color .2s ease, border-color .2s ease, transform .15s ease;
+}
+.filter:hover { border-color: var(--ube-soft); transform: translateY(-1px); }
+.filter:active { transform: translateY(0); }
+.filter__count {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 22px; height: 22px; padding: 0 7px; border-radius: 999px;
+  background: var(--lavender); color: var(--plum);
+  font-size: 0.74rem; font-weight: 700;
+  transition: background .2s ease, color .2s ease;
+}
+.filter--active {
+  background: var(--ube); color: var(--white); border-color: var(--ube);
+  box-shadow: 0 8px 20px -12px rgba(107, 47, 160, 0.7);
+}
+.filter--active .filter__count { background: rgba(255, 255, 255, 0.24); color: var(--white); }
+
 .collection__grid {
   max-width: var(--maxw); margin: 44px auto 0; padding: 0 28px;
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
@@ -274,6 +301,13 @@ button { font-family: inherit; cursor: pointer; }
 }
 .card:hover { transform: translateY(-6px); box-shadow: var(--shadow-card); }
 .card:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+
+.card.is-filtered { display: none; }
+@keyframes cardEnter {
+  from { opacity: 0; transform: translateY(18px) scale(0.97); }
+  to   { opacity: 1; transform: none; }
+}
+.card-enter { animation: cardEnter .42s cubic-bezier(0.22, 1, 0.36, 1) both; }
 
 .card__media { position: relative; aspect-ratio: 1 / 1; overflow: hidden; }
 .card__media img {

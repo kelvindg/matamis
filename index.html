@@ -102,6 +102,11 @@
           Six recipes — tap any card for the full ingredients and method.
         </p>
       </div>
+      <div class="collection__filters" role="group" aria-label="Filter recipes by type">
+        <button class="filter filter--active" data-filter="all" aria-pressed="true">All <span class="filter__count">6</span></button>
+        <button class="filter" data-filter="traditional" aria-pressed="false">Traditional <span class="filter__count">3</span></button>
+        <button class="filter" data-filter="modern" aria-pressed="false">Modern <span class="filter__count">3</span></button>
+      </div>
       <div class="collection__grid" id="collectionGrid" aria-live="polite">
         <!-- Cards injected by js/main.js -->
       </div>
