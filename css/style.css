@@ -374,9 +374,37 @@ button { font-family: inherit; cursor: pointer; }
 }
 .tradition__card h3 {
   font-family: var(--font-display); font-weight: 500; font-size: 1.7rem;
-  margin: 16px 0 12px;
+  margin: 16px 0 6px;
 }
-.tradition__card p { color: rgba(251, 246, 239, 0.85); }
+.tradition__sub {
+  font-style: italic; color: var(--gold-soft);
+  font-size: 1.02rem; margin: 0 0 16px;
+}
+.tradition__body {
+  color: rgba(251, 246, 239, 0.85);
+  margin: 0; font-size: 1rem; line-height: 1.65;
+}
+.tradition__why {
+  margin: 22px 0 0;
+  padding: 14px 18px;
+  border-left: 3px solid var(--gold);
+  background: rgba(251, 246, 239, 0.07);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  color: rgba(251, 246, 239, 0.92);
+  font-size: 0.95rem; line-height: 1.55;
+}
+.tradition__why strong { color: var(--gold-soft); font-weight: 700; }
+
+.tradition__message {
+  margin: 48px auto 0;
+  max-width: 56ch;
+  text-align: center;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.2rem, 2.4vw, 1.65rem);
+  line-height: 1.45;
+  color: var(--cream);
+}
 .tradition__badge {
   display: inline-block; padding: 6px 14px; border-radius: 999px;
   font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
