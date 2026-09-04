@@ -1,4 +1,4 @@
-# Matamis — Modern Filipino Desserts
+# Matamis by Kuya Kelvin
 
 > *məˈtɑː·mɪs* · adjective, Tagalog — **sweet**
 

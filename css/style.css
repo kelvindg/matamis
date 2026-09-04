@@ -136,6 +136,16 @@ button { font-family: inherit; cursor: pointer; }
 .nav.scrolled .nav__brand { color: var(--plum); }
 .nav__brand-mark { color: var(--gold-soft); }
 .nav.scrolled .nav__brand-mark { color: var(--gold); }
+.nav__byline {
+  font-family: var(--font-body);
+  font-style: normal;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--gold-soft);
+  margin-left: 4px;
+}
+.nav.scrolled .nav__byline { color: var(--gold); }
 
 .nav__links {
   display: flex; gap: 26px; margin-left: auto;
