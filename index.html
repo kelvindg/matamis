@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matamis — Modern Filipino Desserts</title>
+  <meta name="description" content="Matamis is a Filipino dessert journal. Leche flan, halo-halo, and ube halaya — traced from their home-style roots to the modern plates that made them famous." />
+  <meta property="og:title" content="Matamis — Modern Filipino Desserts" />
+  <meta property="og:description" content="Three beloved Filipino desserts, from traditional roots to modern fame." />
+  <meta property="og:image" content="images/hero.webp" />
+  <meta name="theme-color" content="#4A1D6E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== Navigation ===== -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="nav__brand" href="#top" aria-label="Matamis home">
+        <span class="nav__brand-mark" aria-hidden="true">✦</span>
+        <span class="nav__brand-word">Matamis</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#story">Story</a>
+        <a href="#collection">Collection</a>
+        <a href="#tradition">Traditional vs Modern</a>
+      </nav>
+
+      <a class="nav__cta" href="#collection">Explore</a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="top">
+      <div class="hero__media">
+        <img src="images/hero.webp" alt="A spread of Filipino desserts — halo-halo, leche flan, and ube halaya — on a warm wooden table" fetchpriority="high" />
+        <div class="hero__scrim" aria-hidden="true"></div>
+      </div>
+      <div class="hero__content">
+        <p class="hero__eyebrow">A Filipino dessert journal</p>
+        <h1 class="hero__title">Sweet, from our<br /><em>table</em> to yours.</h1>
+        <p class="hero__sub">
+          Three beloved desserts — leche flan, halo-halo, and ube halaya —
+          traced from their home-style roots to the modern plates that made them famous.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#collection">Explore the collection</a>
+          <a class="btn btn--ghost" href="#story">Our story</a>
+        </div>
+        <p class="hero__tag">məˈtɑː·mɪs &nbsp;·&nbsp; <em>adjective, Tagalog</em> — sweet</p>
+      </div>
+    </section>
+
+    <!-- ===== Story ===== -->
+    <section class="story" id="story">
+      <div class="story__inner">
+        <p class="eyebrow">The Story</p>
+        <h2 class="section-title">Where heritage meets the modern table.</h2>
+        <div class="story__grid">
+          <p class="story__lead">
+            Filipino desserts are stories you can eat — of Spanish galleons and Japanese
+            shaved ice, of grandmothers stirring purple yam over a low flame, of fiestas
+            where the table groans with sugar and coconut.
+          </p>
+          <div class="story__body">
+            <p>
+              <strong>Matamis</strong> is a small, loving study of three of them. For each
+              dessert we keep two recipes side by side: the <strong>traditional</strong>
+              version our <em>lola</em> would recognize, and the <strong>modern</strong> riff that
+              made it famous again — the ube flan, the minimalist halo-halo, the burnt
+              basque cheesecake.
+            </p>
+            <p>
+              The idea is simple: honor the roots, celebrate the reinvention. Every recipe
+              here is researched from trusted Filipino kitchens, with complete steps you can
+              actually follow.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Collection ===== -->
+    <section class="collection" id="collection">
+      <div class="collection__head">
+        <p class="eyebrow">The Collection</p>
+        <h2 class="section-title">Three desserts, two ways.</h2>
+        <p class="collection__note">
+          Six recipes — tap any card for the full ingredients and method.
+        </p>
+      </div>
+      <div class="collection__grid" id="collectionGrid" aria-live="polite">
+        <!-- Cards injected by js/main.js -->
+      </div>
+    </section>
+
+    <!-- ===== Traditional vs Modern ===== -->
+    <section class="tradition" id="tradition">
+      <div class="tradition__inner">
+        <p class="eyebrow eyebrow--light">Traditional vs Modern</p>
+        <h2 class="section-title section-title--light">A tale of two kitchens.</h2>
+        <div class="tradition__grid">
+          <article class="tradition__card">
+            <span class="tradition__badge">Traditional</span>
+            <h3>Lutong-bahay</h3>
+            <p>
+              The heritage version — patient, home-style, made the way it was before recipes
+              were written down. Fewer ingredients, more time, and a flavor that tastes like
+              memory.
+            </p>
+          </article>
+          <article class="tradition__card">
+            <span class="tradition__badge tradition__badge--modern">Modern Famous</span>
+            <h3>The reinvention</h3>
+            <p>
+              The trendy, restaurant-born riff — ube in the custard, a minimalist halo-halo,
+              a cheesecake from the Basque country. Familiar at heart, dressed for now.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span class="footer__mark" aria-hidden="true">✦</span>
+        <span class="footer__word">Matamis</span>
+        <p>Sweet, from our table to yours.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Explore</h4>
+        <a href="#story">Story</a>
+        <a href="#collection">Collection</a>
+        <a href="#tradition">Traditional vs Modern</a>
+      </div>
+      <div class="footer__col">
+        <h4>Desserts</h4>
+        <a href="#collection">Leche Flan</a>
+        <a href="#collection">Halo-Halo</a>
+        <a href="#collection">Ube Halaya</a>
+      </div>
+      <div class="footer__col footer__col--meta">
+        <p class="footer__note">
+          Recipes researched from Filipino kitchens.<br />
+          Custom imagery. Built as a living study.
+        </p>
+      </div>
+    </div>
+    <div class="footer__bar">
+      <span>© <span id="year"></span> Matamis</span>
+      <span>Made with ube &amp; care</span>
+    </div>
+  </footer>
+
+  <!-- ===== Recipe modal ===== -->
+  <div class="modal" id="recipeModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__panel" role="document">
+      <button class="modal__close" data-close aria-label="Close">×</button>
+      <div class="modal__hero">
+        <img id="modalImage" src="" alt="" />
+      </div>
+      <div class="modal__body">
+        <span class="modal__badge" id="modalBadge"></span>
+        <h2 class="modal__title" id="modalTitle"></h2>
+        <p class="modal__region" id="modalRegion"></p>
+        <ul class="modal__meta" id="modalMeta"></ul>
+
+        <div class="modal__section">
+          <h3>Ingredients</h3>
+          <ul class="modal__ingredients" id="modalIngredients"></ul>
+        </div>
+
+        <div class="modal__section">
+          <h3>Method</h3>
+          <ol class="modal__steps" id="modalSteps"></ol>
+        </div>
+
+        <div class="modal__section">
+          <h3>Notes &amp; tips</h3>
+          <p class="modal__notes" id="modalNotes"></p>
+        </div>
+
+        <a class="modal__source" id="modalSource" href="#" target="_blank" rel="noopener noreferrer">
+          View source recipe ↗
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
